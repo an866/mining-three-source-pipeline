@@ -1,0 +1,40 @@
+# Build artifacts and caches -- all reproducible from source.
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Derived state. The index is rebuilt by `python -m pipeline.ingest`; the cache is
+# an optimisation and is safe to delete at any time.
+.index/
+.cache/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Ad-hoc local analysis output (type/lint reports redirected to a file)
+*.out
+*-report.txt
+
+# Byte-compiled evaluation output (report.md / report.json are committed as the
+# record of the measured baseline, so they are deliberately NOT ignored)
+eval/*.tmp
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Secrets. Never commit a key; the project runs without one.
+.env
+.env.*
+!.env.example

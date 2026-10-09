@@ -1,0 +1,33 @@
+# Keep the build context small and the image reproducible: derived state and local
+# caches must never be copied in, or a stale host index would shadow the one the
+# image builds for itself.
+.index/
+.cache/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+.git/
+.github/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+.env
+.env.*
+*.out
+mypy-report.txt
+
+# Tests are not part of the runtime image; CI runs them from source.
+tests/

@@ -1,0 +1,37 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mining-three-source-pipeline:local
+    ports:
+      # Loopback only. The service has no authentication; publishing it on 0.0.0.0
+      # would be a decision, not a default.
+      - "127.0.0.1:8000:8000"
+    environment:
+      MINING_OFFLINE: "true"
+      MINING_SERVE_HOST: "0.0.0.0"
+      MINING_LOG_LEVEL: "INFO"
+      # Uncomment to enable LLM synthesis inside the container.
+      # LLM_API_KEY: ${LLM_API_KEY:-}
+      # LLM_MODEL: ${LLM_MODEL:-deepseek-chat}
+    volumes:
+      # Persist the index and the HTTP cache across restarts. Named volumes rather
+      # than bind mounts so the host's own .index/.cache cannot leak in.
+      - index:/app/.index
+      - cache:/app/.cache
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,urllib.request,sys; b=json.load(urllib.request.urlopen('http://127.0.0.1:8000/health')); sys.exit(0 if b.get('index_loaded') else 1)"
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+
+volumes:
+  index:
+  cache:

@@ -1,0 +1,735 @@
+{
+  "summary": {
+    "n": 20,
+    "top_k": 5,
+    "recall_at_k": 1.0,
+    "mrr": 0.9375,
+    "faithfulness": 1.0,
+    "correctness": 0.8333,
+    "citation_validity": 1.0,
+    "refusal_accuracy": 1.0,
+    "misses": [],
+    "per_question": [
+      {
+        "id": "cn-re-quota",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 0.6667,
+        "citation_validity": 1.0,
+        "answer_chars": 207,
+        "latency_ms": 60
+      },
+      {
+        "id": "cn-export-control",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 0.5,
+        "citation_validity": 1.0,
+        "answer_chars": 178,
+        "latency_ms": 122
+      },
+      {
+        "id": "cn-lithium-standard",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 188,
+        "latency_ms": 109
+      },
+      {
+        "id": "cn-re-licence",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 353,
+        "latency_ms": 91
+      },
+      {
+        "id": "au-cml",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 461,
+        "latency_ms": 136
+      },
+      {
+        "id": "au-lithium-consult",
+        "mode": "extractive",
+        "rank": 2,
+        "faithfulness": 1.0,
+        "correctness": 0.0,
+        "citation_validity": 1.0,
+        "answer_chars": 338,
+        "latency_ms": 78
+      },
+      {
+        "id": "au-re-package",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 408,
+        "latency_ms": 117
+      },
+      {
+        "id": "au-nickel-review",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 514,
+        "latency_ms": 169
+      },
+      {
+        "id": "news-pilbara",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 408,
+        "latency_ms": 131
+      },
+      {
+        "id": "news-lithium-destock",
+        "mode": "extractive",
+        "rank": 4,
+        "faithfulness": 1.0,
+        "correctness": 0.0,
+        "citation_validity": 1.0,
+        "answer_chars": 210,
+        "latency_ms": 178
+      },
+      {
+        "id": "news-copper-tc",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 409,
+        "latency_ms": 127
+      },
+      {
+        "id": "news-lme-copper",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 348,
+        "latency_ms": 130
+      },
+      {
+        "id": "news-indonesia-nickel",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 439,
+        "latency_ms": 100
+      },
+      {
+        "id": "news-iron-ore-port",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 336,
+        "latency_ms": 133
+      },
+      {
+        "id": "news-re-magnet",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 531,
+        "latency_ms": 123
+      },
+      {
+        "id": "news-zinc-tc",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 0.5,
+        "citation_validity": 1.0,
+        "answer_chars": 328,
+        "latency_ms": 103
+      },
+      {
+        "id": "price-lithium",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 422,
+        "latency_ms": 85
+      },
+      {
+        "id": "price-copper",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 377,
+        "latency_ms": 97
+      },
+      {
+        "id": "price-nickel",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 344,
+        "latency_ms": 160
+      },
+      {
+        "id": "price-iron-ore",
+        "mode": "extractive",
+        "rank": 1,
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 381,
+        "latency_ms": 97
+      }
+    ]
+  },
+  "provenance": {
+    "generated_at": "2026-10-09T04:34:58.809118+00:00",
+    "embedder": {
+      "name": "hashing",
+      "dim": 512
+    },
+    "backend": "numpy",
+    "documents": 705,
+    "chunks": 764,
+    "per_kind": {
+      "news": 200,
+      "policy": 200,
+      "price": 305
+    },
+    "answerer": "extractive",
+    "top_k": 5,
+    "questions": 20,
+    "per_question_raw": [
+      {
+        "id": "cn-re-quota",
+        "question": "中国稀土集团 2026 年上半年稀土开采总量控制指标是多少？",
+        "reference": "岩矿型稀土开采指标 135000 吨，离子型 19150 吨，冶炼分离 172000 吨。",
+        "answer": "中国稀土集团公布 2026 年上半年稀土开采、冶炼分离总量控制指标. [1] 中国稀土集团公布 2026 年上半年稀土开采、冶炼分离总量控制指标。 [1] 中国稀土集团发布《稀土产业发展规划（2026—2031年）（2026-164）》，自 2026 年 1 月 1 日起施行。 [3] 上半年岩矿型稀土（以轻稀土为主）开采指标为 135000 吨，离子型稀土（以中重稀土为主）开采指标为 19150 吨； [1]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.creg.com.cn/notice/2026-h1-rare-earth-quota",
+          "https://www.miit-gov-cn.example/strategy/cn-112",
+          "https://www.creg-com-cn.example/strategy/cn-64",
+          "https://www.miit-gov-cn.example/notice/cn-160",
+          "https://www.creg.com.cn/notice/export-licence-processing-time"
+        ],
+        "expected_urls": [
+          "https://www.creg.com.cn/notice/2026-h1-rare-earth-quota"
+        ],
+        "question_id": "cn-re-quota",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 0.6666666666666666,
+        "citation_validity": 1.0,
+        "answer_chars": 207,
+        "latency_ms": 60
+      },
+      {
+        "id": "cn-export-control",
+        "question": "镓、锗相关物项出口管制从什么时候开始施行？需要办什么手续？",
+        "reference": "2026 年 9 月 1 日起施行，出口须向商务部申请许可。",
+        "answer": "关于对镓、锗相关物项实施出口管制的公告（2026 年修订）. [1] 商务部、海关总署会同有关部门，对镓、锗相关物项实施出口管制，自 2026 年 9 月 1 日起施行。 [1] 涉及物项包括金属镓、氮化镓、氧化锗等八类。 [1] 四、涉及镓总量控制指标的，应当在指标管理信息系统中登记，未登记的指标不得用于生产、销售或出口，新疆省内企业一并适用。 [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.miit.gov.cn/notice/export-control-gallium-germanium-2026",
+          "https://www.miit-gov-cn.example/strategy/cn-24",
+          "https://www.miit-gov-cn.example/notice/cn-40",
+          "https://www.miit-gov-cn.example/notice/cn-88",
+          "https://www.miit-gov-cn.example/notice/cn-168"
+        ],
+        "expected_urls": [
+          "https://www.miit.gov.cn/notice/export-control-gallium-germanium-2026"
+        ],
+        "question_id": "cn-export-control",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 0.5,
+        "citation_validity": 1.0,
+        "answer_chars": 178,
+        "latency_ms": 122
+      },
+      {
+        "id": "cn-lithium-standard",
+        "question": "2026 版碳酸锂产品标准把电池级纯度要求提高到了多少？",
+        "reference": "电池级碳酸锂纯度由 99.5% 提高到 99.6%。",
+        "answer": "碳酸锂、氢氧化锂产品标准（2026 版）发布. [1] 工业和信息化部批准发布碳酸锂、氢氧化锂产品标准 2026 版，自 2027 年 1 月 1 日起实施。 [1] 商务部发布《锂行业标准发布公告（2026-149）》，自 2026 年 7 月 1 日起施行。 [2] 新版标准将电池级碳酸锂的纯度要求由 99.5% 提高至 99.6%，并新增对磁性异物含量的限值。 [1]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.miit.gov.cn/standard/lithium-carbonate-grade-2026",
+          "https://www.miit-gov-cn.example/standard/cn-49",
+          "https://www.industry-gov-au.example/standard/au-101",
+          "https://www.industry-gov-au.example/standard/au-125",
+          "https://www.industry-gov-au.example/consultation/au-152"
+        ],
+        "expected_urls": [
+          "https://www.miit.gov.cn/standard/lithium-carbonate-grade-2026"
+        ],
+        "question_id": "cn-lithium-standard",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 188,
+        "latency_ms": 109
+      },
+      {
+        "id": "cn-re-licence",
+        "question": "稀土出口许可证的办理时限调整成了多久？原因是什么？",
+        "reference": "由 15 个工作日延长至 25 个工作日，原因是新增最终用户核查。",
+        "answer": "稀土出口许可证办理时限调整说明. [1] 中国稀土集团发布说明，稀土出口许可证的平均办理时限由 15 个工作日延长至 25 个工作日，主要原因是新增了最终用户核查环节。 [1] Rare earth magnet exports recover in September after licence delays. [2] Exports of rare earth permanent magnets recovered 18% month on month in September after a backlog of licence applications was cleared, although volumes remain below the five-year average. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.creg.com.cn/notice/export-licence-processing-time",
+          "https://www.mining.com/rare-earth-magnet-exports-recover-in-september/",
+          "https://www.miit-gov-cn.example/notice/cn-160",
+          "https://www.industry-gov-au.example/notice/au-104",
+          "https://www.miit-gov-cn.example/strategy/cn-112"
+        ],
+        "expected_urls": [
+          "https://www.creg.com.cn/notice/export-licence-processing-time"
+        ],
+        "question_id": "cn-re-licence",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 353,
+        "latency_ms": 91
+      },
+      {
+        "id": "au-cml",
+        "question": "澳大利亚关键矿产清单 2026 年更新新增和移除了哪些矿种？",
+        "reference": "新增镓、锗、高纯氧化铝，移除氦。",
+        "answer": "Australia updates the Critical Minerals List (2026). [1] The Department of Industry, Science and Resources has updated the Critical Minerals List, adding gallium, germanium and high-purity alumina, and removing helium. [1] Lithium, rare earth elements, nickel, cobalt and tungsten remain on the list. [1] Projects producing a listed mineral become eligible for the A$2bn Critical Minerals Facility and the 10-year Critical Minerals Production Tax Incentive. [1]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.industry.gov.au/publications/critical-minerals-list-2026-update",
+          "https://www.industry-gov-au.example/notice/au-32",
+          "https://www.industry-gov-au.example/notice/au-35",
+          "https://www.industry-gov-au.example/notice/au-50",
+          "https://www.industry-gov-au.example/notice/au-92"
+        ],
+        "expected_urls": [
+          "https://www.industry.gov.au/publications/critical-minerals-list-2026-update"
+        ],
+        "question_id": "au-cml",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 461,
+        "latency_ms": 136
+      },
+      {
+        "id": "au-lithium-consult",
+        "question": "澳大利亚锂精矿出口许可条件征求意见的核心要求是什么？",
+        "reference": "要求至少 30% 的锂在境内转化，2027 年 7 月 1 日起分阶段实施。",
+        "answer": "Consultation opens on lithium concentrate export licence conditions. [2] Geoscience Australia has released this consultation covering lithium concentrates. [1] DISR has opened consultation on conditions attached to lithium concentrate export licences. [2] DISR (Australia) has released this consultation covering lithium concentrates. [3]",
+        "rank": 2,
+        "top_urls": [
+          "https://www.industry-gov-au.example/consultation/au-152",
+          "https://www.industry.gov.au/consultation/lithium-export-licence-review",
+          "https://www.industry-gov-au.example/consultation/au-23",
+          "https://www.industry-gov-au.example/standard/au-125",
+          "https://www.industry-gov-au.example/notice/au-35"
+        ],
+        "expected_urls": [
+          "https://www.industry.gov.au/consultation/lithium-export-licence-review"
+        ],
+        "question_id": "au-lithium-consult",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 0.0,
+        "citation_validity": 1.0,
+        "answer_chars": 338,
+        "latency_ms": 78
+      },
+      {
+        "id": "au-re-package",
+        "question": "澳大利亚为稀土加工提供了多大规模的资金支持？重点支持哪些元素？",
+        "reference": "A$1.2bn，重点支持钕、镨、镝、铽。",
+        "answer": "The Australian Government will provide A$1.2bn in concessional financing for rare earth separation and magnet manufacturing, targeting neodymium, praseodymium, dysprosium and terbium. [1] A$1.2bn support package for rare earth processing announced. [1] Geoscience Australia has released this notice covering rare earth elements. [2] DISR (Australia) has released this notice covering rare earth elements. [4]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.industry.gov.au/news/rare-earth-support-package",
+          "https://www.industry-gov-au.example/notice/au-8",
+          "https://www.industry-gov-au.example/notice/au-83",
+          "https://www.industry-gov-au.example/notice/au-104",
+          "https://www.industry-gov-au.example/notice/au-53"
+        ],
+        "expected_urls": [
+          "https://www.industry.gov.au/news/rare-earth-support-package"
+        ],
+        "question_id": "au-re-package",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 408,
+        "latency_ms": 117
+      },
+      {
+        "id": "au-nickel-review",
+        "question": "澳大利亚镍市场评估发现多少比例的镍企业处于现金亏损？",
+        "reference": "约 60% 的澳大利亚镍企业现金亏损。",
+        "answer": "Nickel market review finds 60% of Australian operations loss-making. [1] A departmental review of the nickel market found that roughly 60% of Australian nickel operations were cash-negative in the preceding year, attributing the pressure to rapid Indonesian supply growth. [1] Geoscience Australia has released this consultation covering nickel ore. [2] Roughly 12% of the current nickel ore project pipeline is expected to require a fresh assessment, and applicants should plan for 10 additional working days. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.industry.gov.au/review/nickel-market-review",
+          "https://www.industry-gov-au.example/consultation/au-170",
+          "https://www.industry-gov-au.example/notice/au-80",
+          "https://www.industry-gov-au.example/consultation/au-5",
+          "https://www.cnyes-mining.example/costs/nickel-pilbara-western-australia-27"
+        ],
+        "expected_urls": [
+          "https://www.industry.gov.au/review/nickel-market-review"
+        ],
+        "question_id": "au-nickel-review",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 514,
+        "latency_ms": 169
+      },
+      {
+        "id": "news-pilbara",
+        "question": "Pilbara Minerals 把锂精矿产量指引上调到了多少？",
+        "reference": "上调至 80–84 万吨干公吨。",
+        "answer": "Pilbara Minerals raises spodumene guidance after Pilgan debottlenecking. [1] Pilbara Minerals raised full-year spodumene concentrate guidance to between 800,000 and 840,000 dry metric tonnes, up from 760,000 to 800,000, after throughput work at the Pilgan plant lifted recoveries above design rates. [1] the Atacama salar in Chile lithium output rises 11% on recovery gains. [2] 智利阿塔卡马盐湖锂产量因回收率提升而增长 11%。 [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/pilbara-minerals-raises-spodumene-guidance-2026/",
+          "https://www.fastmarkets-news.example/output/lithium-the-atacama-salar-in-chile-144",
+          "https://www.sp-global-metals.example/demand/lithium-katanga-in-the-democratic-republic-of-congo-36",
+          "https://www.mining-com.example/project/lithium-pilbara-western-australia-48",
+          "https://www.sp-global-metals.example/mna/lithium-pilbara-western-australia-180"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/pilbara-minerals-raises-spodumene-guidance-2026/"
+        ],
+        "question_id": "news-pilbara",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 408,
+        "latency_ms": 131
+      },
+      {
+        "id": "news-lithium-destock",
+        "question": "锂电去库存进展如何？下游库存降到什么水平？",
+        "reference": "下游库存由九周降至约四周。",
+        "answer": "lithium inventories fall to a 4-month low, supporting prices. [1] 锂库存降至 4 个月低位，支撑价格。 [1] 四、锂行业年度报告应当在每年第一季度报送，内容包括产量、库存、出口量及 4% 产能利用率区间。 [3] Lithium destocking nears its end as cathode utilisation recovers. [4]",
+        "rank": 4,
+        "top_urls": [
+          "https://www.cnyes-mining.example/inventory/lithium-queensland-0",
+          "https://www.mining-technology.example/inventory/lithium-salta-province-in-argentina-24",
+          "https://www.miit-gov-cn.example/strategy/cn-177",
+          "https://www.mining.com/lithium-destocking-nears-end-as-cathode-rates-rise/",
+          "https://www.miit-gov-cn.example/standard/cn-49"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/lithium-destocking-nears-end-as-cathode-rates-rise/"
+        ],
+        "question_id": "news-lithium-destock",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 0.0,
+        "citation_validity": 1.0,
+        "answer_chars": 210,
+        "latency_ms": 178
+      },
+      {
+        "id": "news-copper-tc",
+        "question": "中国铜冶炼厂为什么同意削减产量？",
+        "reference": "现货加工费转负，反映精矿短缺。",
+        "answer": "A group of major Chinese copper smelters agreed to cut output during the next quarter after spot treatment and refining charges turned negative, reflecting a concentrate shortage. [1] Chinese copper smelters agree to deeper treatment charge cuts. [1] copper imports into China rise 7% as Quebec shipments resume. [2] The development adds roughly 50kt of copper capacity over a 5-month construction period. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/chinese-smelters-agree-treatment-charge-cuts/",
+          "https://www.sp-global-metals.example/trade/copper-quebec-38",
+          "https://www.miit-gov-cn.example/catalogue/cn-121",
+          "https://www.mining.com/lme-copper-inventories-fall-to-six-week-low/",
+          "https://www.miit-gov-cn.example/consultation/cn-25"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/chinese-smelters-agree-treatment-charge-cuts/"
+        ],
+        "question_id": "news-copper-tc",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 409,
+        "latency_ms": 127
+      },
+      {
+        "id": "news-lme-copper",
+        "question": "LME 铜库存降到了什么水平？原因是什么？",
+        "reference": "降至六周低点，因中国电网投资抵消地产走弱。",
+        "answer": "LME copper inventories fall to a six-week low as grid demand holds. [1] Exchange-registered copper inventories fell to their lowest level in six weeks, led by drawdowns at Asian warehouses. [1] 铜（copper）2026-08-07 收盘 9,243.58 USD/t，基准 LME 3M Copper，当日上涨 0.05%。 [2] LME 3M Copper settled at 9,243.58 USD/t on 2026-08-07, up 0.05% on the session. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/lme-copper-inventories-fall-to-six-week-low/",
+          "https://prices.example/copper/2026-08-07",
+          "https://prices.example/copper/2026-08-25",
+          "https://prices.example/copper/2026-10-01",
+          "https://prices.example/copper/2026-09-28"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/lme-copper-inventories-fall-to-six-week-low/"
+        ],
+        "question_id": "news-lme-copper",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 348,
+        "latency_ms": 130
+      },
+      {
+        "id": "news-indonesia-nickel",
+        "question": "印度尼西亚 2027 年镍矿配额调整了多少？",
+        "reference": "由 2.75 亿吨下调至 2.4 亿吨湿吨，降幅约 13%。",
+        "answer": "Indonesia's energy and mineral resources ministry cut the 2027 nickel ore production quota to 240 million wet metric tonnes from 275 million, a cut of roughly 13%. [1] Indonesia trims nickel ore quota for 2027. [1] Indonesian nickel supply has already pushed global prices to multi-year lows. [1] Operations at Sulawesi in Indonesia reported a 11% change in nickel metrics over the period, according to the company's latest disclosure. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/indonesia-trims-nickel-ore-quota-for-2027/",
+          "https://www.cnyes-mining.example/demand/nickel-sulawesi-in-indonesia-135",
+          "https://www.industry.gov.au/review/nickel-market-review",
+          "https://www.miit-gov-cn.example/notice/cn-162",
+          "https://www.miit-gov-cn.example/standard/cn-18"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/indonesia-trims-nickel-ore-quota-for-2027/"
+        ],
+        "question_id": "news-indonesia-nickel",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 439,
+        "latency_ms": 100
+      },
+      {
+        "id": "news-iron-ore-port",
+        "question": "中国港口铁矿石库存处于什么水平？",
+        "reference": "升至 1.48 亿吨的四个月高位。",
+        "answer": "Iron ore inventories at Chinese ports build to a four-month high. [1] Iron ore inventories at 45 Chinese ports rose to a four-month high of 148 million tonnes, up 5% month on month, as arrivals outpaced steadily weakening steel mill demand. [1] 一、铁矿石行业年度报告应当在每年第一季度报送，内容包括产量、库存、出口量及 18% 产能利用率区间。 [2] 二、对未按规定报送铁矿石数据的企业，由中国稀土集团责令限期改正； [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/port-hedland-iron-ore-inventories-build/",
+          "https://www.creg-com-cn.example/notice/cn-123",
+          "https://www.creg-com-cn.example/notice/cn-43",
+          "https://www.miit-gov-cn.example/notice/cn-75",
+          "https://www.miit-gov-cn.example/notice/cn-27"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/port-hedland-iron-ore-inventories-build/"
+        ],
+        "question_id": "news-iron-ore-port",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 336,
+        "latency_ms": 133
+      },
+      {
+        "id": "news-re-magnet",
+        "question": "稀土磁材出口在 9 月恢复得怎么样？",
+        "reference": "环比回升 18%，仍低于五年均值。",
+        "answer": "Rare earth magnet exports recover in September after licence delays. [1] Exports of rare earth permanent magnets recovered 18% month on month in September after a backlog of licence applications was cleared, although volumes remain below the five-year average. [1] Neodymium-praseodymium oxide prices firmed on restocking by magnet makers. [1] The Australian Government will provide A$1.2bn in concessional financing for rare earth separation and magnet manufacturing, targeting neodymium, praseodymium, dysprosium and terbium. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/rare-earth-magnet-exports-recover-in-september/",
+          "https://www.industry.gov.au/news/rare-earth-support-package",
+          "https://www.creg.com.cn/notice/export-licence-processing-time",
+          "https://www.miit-gov-cn.example/strategy/cn-112",
+          "https://www.miit-gov-cn.example/standard/cn-144"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/rare-earth-magnet-exports-recover-in-september/"
+        ],
+        "question_id": "news-re-magnet",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 531,
+        "latency_ms": 123
+      },
+      {
+        "id": "news-zinc-tc",
+        "question": "锌加工费为什么跌到多年低点？",
+        "reference": "两座中型矿山关闭抽走精矿，冶炼厂减产，后市预期转向短缺。",
+        "answer": "Zinc spot treatment charges fell to multi-year lows after the closure of two mid-sized mines removed concentrate from the market. [1] Zinc treatment charges hit multi-year lows on mine closures. [1] zinc inventories fall to a 6-month low, supporting prices. [2] 锌（zinc）2026-09-10 收盘 2,760.29 USD/t，基准 LME 3M Zinc，当日下跌 0.01%。 [3]",
+        "rank": 1,
+        "top_urls": [
+          "https://www.mining.com/zinc-treatment-charges-hit-multi-year-lows/",
+          "https://www.mining-technology.example/inventory/zinc-the-atacama-salar-in-chile-172",
+          "https://prices.example/zinc/2026-09-10",
+          "https://prices.example/zinc/2026-08-21",
+          "https://www.fastmarkets-news.example/inventory/zinc-quebec-184"
+        ],
+        "expected_urls": [
+          "https://www.mining.com/zinc-treatment-charges-hit-multi-year-lows/"
+        ],
+        "question_id": "news-zinc-tc",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 0.5,
+        "citation_validity": 1.0,
+        "answer_chars": 328,
+        "latency_ms": 103
+      },
+      {
+        "id": "price-lithium",
+        "question": "近 60 个交易日碳酸锂价格是涨还是跌？跌幅多少？",
+        "reference": "下跌 18.50%。",
+        "answer": "近 60 个交易日碳酸锂价格下跌 18.50%，区间 58,272.50-71,500.00 CNY/t，基准 SHFE Lithium Carbonate。 [1] SHFE Lithium Carbonate (碳酸锂) lithium price trend over the last 60 sessions: start 71,500.00, end 58,272.50 CNY/t, change -18.50% (-13,227.50 CNY/t), direction down. [1] 碳酸锂近 60 个交易日下跌 18.50%，区间 58,272.50-71,500.00 CNY/t。 [2] Over the last 60 sessions lithium fell 18.50% (from 71,500.00 to 58,272.50 CNY/t), range 58,272.50-71,500.00. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://prices.example/lithium/trend-60d",
+          "https://prices.example/lithium/2026-08-17",
+          "https://prices.example/lithium/2026-09-07",
+          "https://prices.example/lithium/2026-09-22",
+          "https://prices.example/lithium/2026-09-15"
+        ],
+        "expected_urls": [
+          "https://prices.example/lithium/trend-60d"
+        ],
+        "question_id": "price-lithium",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 422,
+        "latency_ms": 85
+      },
+      {
+        "id": "price-copper",
+        "question": "近 60 个交易日铜价走势如何？",
+        "reference": "上涨 3.40%。",
+        "answer": "LME 3M Copper (铜) copper price trend over the last 60 sessions: start 9,180.00, end 9,492.12 USD/t, change +3.40% (+312.12 USD/t), direction up. [1] 近 60 个交易日铜价格上涨 3.40%，区间 9,180.00-9,492.12 USD/t，基准 LME 3M Copper。 [1] 铜近 60 个交易日上涨 3.40%，区间 9,180.00-9,492.12 USD/t。 [2] Over the last 60 sessions copper rose 3.40% (from 9,180.00 to 9,492.12 USD/t), range 9,180.00-9,492.12. [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://prices.example/copper/trend-60d",
+          "https://prices.example/copper/2026-08-13",
+          "https://prices.example/copper/2026-08-20",
+          "https://prices.example/copper/2026-09-04",
+          "https://prices.example/copper/2026-09-22"
+        ],
+        "expected_urls": [
+          "https://prices.example/copper/trend-60d"
+        ],
+        "question_id": "price-copper",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 377,
+        "latency_ms": 97
+      },
+      {
+        "id": "price-nickel",
+        "question": "近 60 个交易日镍价跌幅是多少？",
+        "reference": "下跌 9.20%。",
+        "answer": "近 60 个交易日镍价格下跌 9.20%，区间 14,164.80-15,600.00 USD/t，基准 LME 3M Nickel。 [1] LME 3M Nickel (镍) nickel price trend over the last 60 sessions: start 15,600.00, end 14,164.80 USD/t, change -9.20% (-1,435.20 USD/t), direction down. [1] nickel inventories fall to a 3-month low, supporting prices. [5] 镍近 60 个交易日下跌 9.20%，区间 14,164.80-15,600.00 USD/t。 [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://prices.example/nickel/trend-60d",
+          "https://prices.example/nickel/2026-08-24",
+          "https://prices.example/nickel/2026-10-02",
+          "https://prices.example/nickel/2026-08-25",
+          "https://www.cnyes-mining.example/inventory/nickel-the-atacama-salar-in-chile-147"
+        ],
+        "expected_urls": [
+          "https://prices.example/nickel/trend-60d"
+        ],
+        "question_id": "price-nickel",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 344,
+        "latency_ms": 160
+      },
+      {
+        "id": "price-iron-ore",
+        "question": "近 60 个交易日铁矿石价格变化大吗？",
+        "reference": "基本持平，变动不足 1%。",
+        "answer": "近 60 个交易日铁矿石价格基本持平 0.40%，区间 808.06-812.42 CNY/t，基准 Mysteel 62% Fe CFR Qingdao。 [1] Mysteel 62% Fe CFR Qingdao (铁矿石) iron_ore price trend over the last 60 sessions: start 812.00, end 808.75 CNY/t, change -0.40% (-3.25 CNY/t), direction flat. [1] 铁矿石近 60 个交易日基本持平 0.40%，区间 808.06-812.42 CNY/t。 [2] 铁矿石（iron_ore）2026-10-01 收盘 808.27 CNY/t，基准 Mysteel 62% Fe CFR Qingdao，当日下跌 0.04%。 [2]",
+        "rank": 1,
+        "top_urls": [
+          "https://prices.example/iron_ore/trend-60d",
+          "https://prices.example/iron_ore/2026-10-01",
+          "https://prices.example/iron_ore/2026-09-15",
+          "https://prices.example/iron_ore/2026-08-25",
+          "https://prices.example/iron_ore/2026-09-10"
+        ],
+        "expected_urls": [
+          "https://prices.example/iron_ore/trend-60d"
+        ],
+        "question_id": "price-iron-ore",
+        "mode": "extractive",
+        "faithfulness": 1.0,
+        "correctness": 1.0,
+        "citation_validity": 1.0,
+        "answer_chars": 381,
+        "latency_ms": 97
+      }
+    ]
+  },
+  "refusal_detail": [
+    {
+      "id": "refuse-platinum",
+      "question": "铂金（platinum）最近的价格走势如何？",
+      "refused": true,
+      "mode": "refusal",
+      "answer": "This corpus carries no documents for: 铂金 platinum、锡 tin. The index covers copper, zinc, nickel, lithium and iron ore prices, Chinese and Australian critical-minerals policy, and mining news; nothing here can answer a question about the mine",
+      "retrieved": 0,
+      "notes": "uncovered commodity; measured best hit scores 0.46, above several real answers"
+    },
+    {
+      "id": "refuse-uranium",
+      "question": "铀矿价格最近走势如何？供应是否紧张？",
+      "refused": true,
+      "mode": "refusal",
+      "answer": "This corpus carries no documents for: 铀 uranium. The index covers copper, zinc, nickel, lithium and iron ore prices, Chinese and Australian critical-minerals policy, and mining news; nothing here can answer a question about the mineral(s) a",
+      "retrieved": 0,
+      "notes": "uncovered commodity"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # The whole pipeline runs offline with no secrets, which is the point of the
+  # deterministic corpus -- CI needs no API key to exercise the real code path.
+  MINING_OFFLINE: "true"
+  MINING_CACHE_ENABLED: "false"
+
+jobs:
+  quality:
+    name: lint, format, types
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - name: ruff check
+        run: ruff check .
+      - name: ruff format --check
+        run: ruff format --check .
+      - name: mypy --strict
+        run: mypy
+
+  test:
+    name: tests (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - name: pytest
+        run: pytest -q
+
+  pipeline:
+    name: ingest + evaluate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -e ".[dev]"
+
+      - name: Build the index
+        run: python -m pipeline.ingest --days 30 --index-dir .index
+
+      # The corpus floors are asserted here as well as in the test suite, because a
+      # thin corpus is the failure mode that makes every downstream metric
+      # meaningless rather than obviously wrong.
+      - name: Verify the corpus floors
+        run: |
+          python - <<'PY'
+          import json, subprocess, sys
+          out = subprocess.run(
+              [sys.executable, "-m", "pipeline.ingest", "--days", "30",
+               "--json", "--no-save", "--quiet"],
+              capture_output=True, text=True, check=True,
+          ).stdout
+          report = json.loads(out)
+          per_kind = report["per_kind"]
+          problems = [
+              f"{kind}={per_kind.get(kind, 0)} < 200"
+              for kind in ("news", "policy", "price")
+              if per_kind.get(kind, 0) < 200
+          ]
+          if report["documents"] < 600:
+              problems.append(f"total={report['documents']} < 600")
+          if report["window_days"] < 30:
+              problems.append(f"window={report['window_days']} < 30")
+          if report["duplicates_removed"] <= 0:
+              problems.append("no duplicates removed: the cascade may be dead code")
+          if problems:
+              sys.exit("corpus floors not met: " + "; ".join(problems))
+          print("corpus ok:", report["documents"], "documents,", report["per_kind"])
+          PY
+
+      # recall@5 and faithfulness are gated. A retrieval regression should fail the
+      # build, not be noticed later.
+      - name: Evaluate
+        run: python -m eval.harness --out eval
+
+      - name: Upload the evaluation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: |
+            eval/report.md
+            eval/report.json
+          if-no-files-found: warn
+
+  docker:
+    name: docker build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # Build only: the image ingests its own corpus at build time, so a successful
+      # build also proves the pipeline runs in a clean environment.
+      - run: docker build -t mining-three-source-pipeline:ci .
